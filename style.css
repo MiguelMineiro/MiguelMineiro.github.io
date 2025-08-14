@@ -1,0 +1,265 @@
+/* ---- Reset e Estilos Globais ---- */
+:root {
+    --bg-color: #121212;
+    --primary-color: #1e1e1e;
+    --font-color: #e0e0e0;
+    --highlight-color: #00aaff;
+    --card-bg-color: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    line-height: 1.6;
+}
+
+/* ---- Header e Navegação ---- */
+header {
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--highlight-color);
+}
+
+/* ---- Seções Principais ---- */
+main {
+    padding-top: 80px; /* Espaço para o header fixo */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--highlight-color);
+}
+
+.content-section {
+    padding: 6rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---- Seção Hero ---- */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text .highlight {
+    color: var(--highlight-color);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: var(--highlight-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.4);
+}
+
+/* ---- Seção Sobre Mim ---- */
+#about {
+    background-color: var(--primary-color);
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--highlight-color);
+}
+
+/* ---- Seção Habilidades ---- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+.skill-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.skill-card img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ---- Seção Projetos ---- */
+#projects {
+    background-color: var(--primary-color);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+.project-card {
+    background: var(--card-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.project-card h3 {
+    margin: 1rem 1.5rem;
+}
+.project-card p {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    font-weight: 300;
+}
+.project-links {
+    display: flex;
+    gap: 1rem;
+    padding: 0 1.5rem 1.5rem;
+}
+.btn-project {
+    background-color: transparent;
+    border: 1px solid var(--highlight-color);
+    color: var(--highlight-color);
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-project:hover {
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+
+/* ---- Seção Contato ---- */
+#contact {
+    text-align: center;
+}
+.contact-text {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.contact-item {
+    color: var(--font-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+.contact-item:hover {
+    color: var(--highlight-color);
+}
+.contact-item i {
+    width: 24px;
+    height: 24px;
+}
+
+/* ---- Footer ---- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+}
+
+/* ---- Animações ---- */
+.content-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
